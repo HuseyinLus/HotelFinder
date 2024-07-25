@@ -1,0 +1,17 @@
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\bin\Debug\net6.0\HotelFinder.DataAcces.deps.json
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\bin\Debug\net6.0\HotelFinder.DataAcces.runtimeconfig.json
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\bin\Debug\net6.0\HotelFinder.DataAcces.dll
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\bin\Debug\net6.0\HotelFinder.DataAcces.pdb
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\bin\Debug\net6.0\HotelFinder.Entities.dll
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\bin\Debug\net6.0\HotelFinder.Entities.pdb
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\HotelFinder.DataAcces.csproj.AssemblyReference.cache
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\HotelFinder.DataAcces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\HotelFinder.DataAcces.AssemblyInfoInputs.cache
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\HotelFinder.DataAcces.AssemblyInfo.cs
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\HotelFinder.DataAcces.csproj.CoreCompileInputs.cache
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\HotelFin.073D1BA7.Up2Date
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\HotelFinder.DataAcces.dll
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\refint\HotelFinder.DataAcces.dll
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\HotelFinder.DataAcces.pdb
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\HotelFinder.DataAcces.genruntimeconfig.cache
+C:\Users\Luka\source\repos\Solution4\HotelFinder.DataAcces\obj\Debug\net6.0\ref\HotelFinder.DataAcces.dll
