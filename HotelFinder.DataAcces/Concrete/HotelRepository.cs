@@ -98,7 +98,7 @@ namespace HotelFinder.DataAcces.Concrete
                 return null;
             }
         }
-        public async async UpdateHotelCity(int id,string city)
+        public async Task<Hotel> UpdateHotelCity(int id, string city)
         {
             using (var hotelDbContext = new HotelDbContext())
             {
@@ -113,7 +113,7 @@ namespace HotelFinder.DataAcces.Concrete
                 return null;
             }
         }
-        public async async UpdateHotelCity(int id,string country)
+        public async Task<Hotel> UpdateHotelCountry(int id, string country)
         {
             using (var hotelDbContext = new HotelDbContext())
             {
@@ -122,6 +122,7 @@ namespace HotelFinder.DataAcces.Concrete
                 {
                     UpdateHotelCountry.Country = country;
                     await hotelDbContext.SaveChangesAsync();
+                    hotelDbContext.Update(UpdateHotelCountry);
                     return UpdateHotelCountry;
                 }
                 return null;
