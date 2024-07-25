@@ -141,7 +141,7 @@ namespace HotelFinder.API.Controllers
 
         [HttpPut]
         [Route("UpdateHotelCity/{city}")]
-        public async async UpdateHotelCity(int id,string city)
+        public async Task<IActionResult> UpdateHotelCity(int id, string city)
         {
             if (await _hotelService.UpdateHotelCity(id,city) != null)
             {
@@ -153,12 +153,14 @@ namespace HotelFinder.API.Controllers
 
         [HttpPut]
         [Route("UpdateHotelCountry/{country}")]
-        public async UpdateHotelCountry(int id,string city)
+        public async Task<IActionResult> UpdateHotelCountry(int id, string country)
         {
-            if (await _hotelService.UpdateHotelCountry(id,city) != null)
+            if (await _hotelService.UpdateHotelCountry(id,country) != null)
             {
-                var response = await _hotelService.UpdateHotelCountry
+                var response = await _hotelService.UpdateHotelCountry(id,country);
+                return Ok(response);
             }
+            return NotFound();
         }
     }
 }
