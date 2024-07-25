@@ -2012,11 +2012,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj",
       "projectName": "HotelFinder.Entities",
-      "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj",
+      "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj",
       "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\obj\\",
+      "outputPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Luka\\AppData\\Roaming\\NuGet\\NuGet.Config",

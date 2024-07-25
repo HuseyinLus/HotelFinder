@@ -6,6 +6,7 @@ namespace HotelFinder.Entities
     public class Hotel
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Required]
         public int Id { get; set; }
 
         [StringLength(50)]
@@ -19,5 +20,7 @@ namespace HotelFinder.Entities
         [StringLength(50)]
         [Required]
         public string? Country { get; set; }
+
+        public ICollection<Car> Cars { get; set; }
     }
 }
