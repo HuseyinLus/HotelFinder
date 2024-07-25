@@ -1,0 +1,26 @@
+﻿using HotelFinder.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HotelFinder.DataAcces.Abstract
+{
+    public interface ICarRepository
+    {
+        public Task<List<Car>> GetAllCars();
+
+        public Task<Car> GetCarsById(int id);
+
+        public Task<Car> AddNewCar(Car car);
+
+        public Task<Car> UpdateCarModel(int id, string model);
+
+        //public Task<Car> UpdateCarsHotel(int id, string hotel);
+
+        Task DeleteCar(int id);
+
+
+    }
+}
