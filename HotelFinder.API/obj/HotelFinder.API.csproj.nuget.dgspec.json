@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.API\\HotelFinder.API.csproj": {}
+    "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.API\\HotelFinder.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.API\\HotelFinder.API.csproj": {
+    "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.API\\HotelFinder.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.API\\HotelFinder.API.csproj",
+        "projectUniqueName": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.API\\HotelFinder.API.csproj",
         "projectName": "HotelFinder.API",
-        "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.API\\HotelFinder.API.csproj",
+        "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.API\\HotelFinder.API.csproj",
         "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.API\\obj\\",
+        "outputPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,11 +29,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Business\\HotelFinder.Business.csproj": {
-                "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Business\\HotelFinder.Business.csproj"
+              "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Business\\HotelFinder.Business.csproj": {
+                "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Business\\HotelFinder.Business.csproj"
               },
-              "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj": {
-                "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj"
+              "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj": {
+                "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Business\\HotelFinder.Business.csproj": {
+    "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Business\\HotelFinder.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Business\\HotelFinder.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Business\\HotelFinder.Business.csproj",
         "projectName": "HotelFinder.Business",
-        "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Business\\HotelFinder.Business.csproj",
+        "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Business\\HotelFinder.Business.csproj",
         "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Business\\obj\\",
+        "outputPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,11 +106,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj": {
-                "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj"
+              "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj": {
+                "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj"
               },
-              "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj": {
-                "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj"
+              "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj": {
+                "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj"
               }
             }
           }
@@ -149,14 +149,14 @@
         }
       }
     },
-    "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj": {
+    "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj",
+        "projectUniqueName": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj",
         "projectName": "HotelFinder.DataAcces",
-        "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj",
+        "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.DataAcces\\HotelFinder.DataAcces.csproj",
         "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.DataAcces\\obj\\",
+        "outputPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.DataAcces\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -174,8 +174,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj": {
-                "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj"
+              "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj": {
+                "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj"
               }
             }
           }
@@ -226,14 +226,14 @@
         }
       }
     },
-    "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj": {
+    "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj",
         "projectName": "HotelFinder.Entities",
-        "projectPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\HotelFinder.Entities.csproj",
+        "projectPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\HotelFinder.Entities.csproj",
         "packagesPath": "C:\\Users\\Luka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.Entities\\obj\\",
+        "outputPath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luka\\AppData\\Roaming\\NuGet\\NuGet.Config",

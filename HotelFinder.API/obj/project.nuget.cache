@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kbRMfq9IJQA=",
+  "dgSpecHash": "ZPU0/aMeocg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luka\\source\\repos\\HotelProject\\HotelFinder.API\\HotelFinder.API.csproj",
+  "projectFilePath": "C:\\Users\\Luka\\Source\\Repos\\HotelFinder\\HotelFinder.API\\HotelFinder.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luka\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Luka\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

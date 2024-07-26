@@ -10,8 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Register services
 builder.Services.AddControllers();
-builder.Services.AddSingleton<IHotelService, HotelManeger>();
-builder.Services.AddSingleton<IHotelRepository1, HotelRepository>();
+builder.Services.AddSingleton<IHotelService, HotelsService>();
+builder.Services.AddSingleton<IHotelRepository, HotelRepository>();
+builder.Services.AddSingleton<ICarService, CarsService>();
+builder.Services.AddSingleton<ICarRepository, CarRepository>();
 builder.Services.AddSwaggerDocument(config =>
 {
     config.PostProcess = (doc =>
@@ -19,7 +21,7 @@ builder.Services.AddSwaggerDocument(config =>
         doc.Info.Title = "Hotels Api";
         doc.Info.Version = "1.0.13";
     });
-}); ;
+}); 
 
 var app = builder.Build();
 

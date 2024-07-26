@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HotelFinder.DataAcces.Concrete
 {
-    public class HotelRepository : IHotelRepository1
+    public class HotelRepository : IHotelRepository
     {
         public async Task<Hotel> CreateHotel(Hotel hotel)
         {
@@ -45,8 +45,6 @@ namespace HotelFinder.DataAcces.Concrete
             using (var hotelDbContext = new HotelDbContext())
             {
                 return await hotelDbContext.Hotels.FirstOrDefaultAsync(x => x.Name.ToLower() == name.ToLower());
-                //return await hotelDbContext.Hotels.FirstOrDefaultAsync(x => x.Name.ToLower() == name.ToLower());
-
             }
         }
 
@@ -128,5 +126,6 @@ namespace HotelFinder.DataAcces.Concrete
                 return null;
             }
         }
+        
     }
 }

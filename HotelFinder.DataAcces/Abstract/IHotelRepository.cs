@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelFinder.DataAcces.Abstract
 {
-    public interface IHotelRepository1
+    public interface IHotelRepository
     {
         Task<List<Hotel>> GetHotels();
 
