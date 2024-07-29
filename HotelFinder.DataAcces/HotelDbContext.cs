@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HotelFinder.DataAcces
 {
-    internal class HotelDbContext : DbContext
+    internal class dbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

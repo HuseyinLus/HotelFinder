@@ -36,7 +36,7 @@ namespace HotelFinder.API.Controllers
         }
 
         [HttpGet]
-        [Route("GetCarNyId/{id}")]
+        [Route("GetCarById/{id}")]
         public async Task<IActionResult> GetCarByhId(int id)
         {
             var car = await _carService.GetCarsById(id);
@@ -48,7 +48,7 @@ namespace HotelFinder.API.Controllers
         }
 
         [HttpPut]
-        [Route("UpdateCarModel")]
+        [Route("UpdateCarModel/{id}")]
 
         public async Task<IActionResult> UpdateCarModel(int id, string model)
         {
@@ -74,7 +74,7 @@ namespace HotelFinder.API.Controllers
         }
 
         [HttpPut]
-        [Route("UpdateLicencePlate")]
+        [Route("UpdateLicencePlate/{id}")]
 
         public async Task<IActionResult> UpdateLicencePlate(int id, string plate)
         {
@@ -87,7 +87,7 @@ namespace HotelFinder.API.Controllers
         }
 
         [HttpPut]
-        [Route("UpdateContactNumber")]
+        [Route("UpdateContactNumber/{id}")]
         public async Task<IActionResult> UpdateContactNumber(int id, string number)
         {
             var car = _carService.UpdateContactNumber(id,number);
@@ -98,7 +98,7 @@ namespace HotelFinder.API.Controllers
             return NotFound();
         }
         [HttpGet]
-        [Route("GetCarsHotel")]
+        [Route("GetCarsHotel/{id}")]
         public async Task<IActionResult> GetCarsHotel(int id)
         {
             var car = _carService.GetCarsHotel(id);
