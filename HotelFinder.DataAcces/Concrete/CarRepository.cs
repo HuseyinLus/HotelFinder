@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -80,6 +81,7 @@ namespace HotelFinder.DataAcces.Concrete
                 return null;
             }
         }
+
         public async Task<Car> UpdateContactNumber(int id, string number)
         {
             using (var carDbCotext = new HotelDbContext())
@@ -95,5 +97,43 @@ namespace HotelFinder.DataAcces.Concrete
                 return null;
             }
         }
+        public async Task<Hotel>GetHotelById(int id)
+        {
+            using (var hoteldbContext = new HotelDbContext())
+            {
+                var hotel = hoteldbContext.Hotels.Find(id);
+                return hotel;
+            }
+        }
+        public async Task<Hotel> GetCarsHotel(int id)
+        {
+            using (var carDbContext = new HotelDbContext())
+            {
+                var car = carDbContext.Cars.Find(id);
+                if (car != null)
+                {
+                    var hotelId = car.HotelId;
+                    var hotel =  await GetHotelById(hotelId);
+                    return hotel;
+                }
+                throw new NotImplementedException("Car Repositotry car is null");
+            }
+        }
+
+
+        //public async task<list<hotel, car>> getcarsandhotel(int id)
+        //{
+        //    using (var cardbcontext = new hoteldbcontext())
+        //    {
+        //        var car = cardbcontext.cars.find(id);
+        //        if (car != null)
+        //        {
+        //            var hotelid = car.hotelid;
+        //            var hotel = await gethotelbyid(hotelid);
+        //            return (car, hotel);
+        //        }
+        //        throw new notimplementedexception("car repositotry car is null");
+        //    }
+        //}
     }
 }

@@ -21,6 +21,10 @@ namespace HotelFinder.Business.Abstract
 
         Task<Car> UpdateContactNumber(int id, string number);
 
+        Task<Hotel> GetCarsHotel(int id);
+
+        Task<Hotel> GetHotelById(int id);
+
         Task DeleteCar(int id);
 
     }

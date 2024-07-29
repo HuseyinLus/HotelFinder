@@ -126,6 +126,29 @@ namespace HotelFinder.DataAcces.Concrete
                 return null;
             }
         }
+
+        public async Task<Car> GetHotelsCars(int id)
+        {
+            using (var hotelDbContext = new HotelDbContext())
+            {
+                var hotel = hotelDbContext.Hotels.Find(id);
+                if (hotel != null)
+                {
+                    var car = hotel.CarID;
+                    return await GetCarById(car);
+                   
+                }
+                return null;
+            }
+        }
+        public async Task<Car> GetCarById(int id)
+        {
+            using (var hotelDbContext = new HotelDbContext())
+            {
+                var car = hotelDbContext.Cars.Find(id);
+                return car;
+            }
+        }
         
     }
 }

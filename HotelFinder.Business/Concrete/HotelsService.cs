@@ -80,5 +80,13 @@ namespace HotelFinder.Business.Concrete
         {
             return await _hotelRepository.UpdateHotelCountry(id,country);
         }
+        public async Task<Car> GetHotelsCar(int id)
+        {
+            return await _hotelRepository.GetHotelsCars(id);
+        }
+        public async Task<Car> GetCarById(int id)
+        {
+            return await _hotelRepository.GetCarById(id);
+        }
     }
 }

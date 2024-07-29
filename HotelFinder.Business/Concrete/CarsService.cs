@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
 
 namespace HotelFinder.Business.Concrete
 {
@@ -55,6 +56,16 @@ namespace HotelFinder.Business.Concrete
         public async Task<Car> UpdateContactNumber(int id, string number)
         {
             return await _carRepository.UpdateContactNumber(id, number);
+        }
+
+        public async Task<Hotel> GetCarsHotel(int id)
+        {
+            return await _carRepository.GetCarsHotel(id);
+        }
+
+        public async Task<Hotel> GetHotelById(int id)
+        {
+            return await _carRepository.GetHotelById(id);
         }
     }
 }

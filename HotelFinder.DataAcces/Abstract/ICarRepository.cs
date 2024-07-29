@@ -21,8 +21,9 @@ namespace HotelFinder.DataAcces.Abstract
 
         public Task<Car> UpdateContactNumber(int id, string number);
 
-        //public Task<Car> UpdateCarsHotel(int id, string hotel);
+        public Task<Hotel> GetCarsHotel(int id);
 
+        public Task<Hotel> GetHotelById(int id);
         Task DeleteCar(int id);
 
 
