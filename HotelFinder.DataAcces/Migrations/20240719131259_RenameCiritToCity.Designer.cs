@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HotelFinder.DataAcces.Migrations
 {
-    [DbContext(typeof(HotelDbContext))]
+    [DbContext(typeof(dbContext))]
     [Migration("20240719131259_RenameCiritToCity")]
     partial class RenameCiritToCity
     {

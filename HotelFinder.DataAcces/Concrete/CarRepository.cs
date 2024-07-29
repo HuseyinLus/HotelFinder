@@ -15,7 +15,7 @@ namespace HotelFinder.DataAcces.Concrete
     {
         public async Task<Car> AddNewCar(Car car)
         {
-            using (var carDbCotext = new HotelDbContext())
+            using (var carDbCotext = new dbContext())
             {
                 carDbCotext.Cars.Add(car);
                 var id = carDbCotext.Hotels.FindAsync(car.Id);
@@ -27,7 +27,7 @@ namespace HotelFinder.DataAcces.Concrete
 
         public async Task DeleteCar(int id)
         {
-            using (var HotelDbContext = new HotelDbContext())
+            using (var HotelDbContext = new dbContext())
             {
                 var deleteCar = await GetCarsById(id);
                 HotelDbContext.Cars.Remove(deleteCar);
@@ -37,7 +37,7 @@ namespace HotelFinder.DataAcces.Concrete
 
         public async Task<List<Car>> GetAllCars()
         {
-            using (var HotelDbContext = new HotelDbContext())
+            using (var HotelDbContext = new dbContext())
             {
                 return await HotelDbContext.Cars.ToListAsync();
             }
@@ -45,7 +45,7 @@ namespace HotelFinder.DataAcces.Concrete
 
         public async Task<Car> GetCarsById(int id)
         {
-            using (var carDbContext = new HotelDbContext())
+            using (var carDbContext = new dbContext())
             {
                 return await carDbContext.Cars.FindAsync(id);
             }
@@ -53,7 +53,7 @@ namespace HotelFinder.DataAcces.Concrete
 
         public async Task<Car> UpdateCarModel(int id, string model)
         {
-            using (var HotelDbContext = new HotelDbContext())
+            using (var HotelDbContext = new dbContext())
             {
                 var UpdateCarModel = HotelDbContext.Cars.Find(id);
                 if (UpdateCarModel != null)
@@ -68,7 +68,7 @@ namespace HotelFinder.DataAcces.Concrete
         }
         public async Task<Car> UpdateLicencePlate(int id, string plate)
         {
-            using (var HotelDbContext = new HotelDbContext())
+            using (var HotelDbContext = new dbContext())
             {
                 var UpdateLicencePlate = HotelDbContext.Cars.Find(id);
                 if (UpdateLicencePlate != null)
@@ -84,7 +84,7 @@ namespace HotelFinder.DataAcces.Concrete
 
         public async Task<Car> UpdateContactNumber(int id, string number)
         {
-            using (var carDbCotext = new HotelDbContext())
+            using (var carDbCotext = new dbContext())
             {
                 var UpdateContactNumber = carDbCotext.Cars.Find(id);
                 if (UpdateContactNumber != null)
@@ -99,7 +99,7 @@ namespace HotelFinder.DataAcces.Concrete
         }
         public async Task<Hotel>GetHotelById(int id)
         {
-            using (var hoteldbContext = new HotelDbContext())
+            using (var hoteldbContext = new dbContext())
             {
                 var hotel = hoteldbContext.Hotels.Find(id);
                 return hotel;
@@ -107,7 +107,7 @@ namespace HotelFinder.DataAcces.Concrete
         }
         public async Task<Hotel> GetCarsHotel(int id)
         {
-            using (var carDbContext = new HotelDbContext())
+            using (var carDbContext = new dbContext())
             {
                 var car = carDbContext.Cars.Find(id);
                 if (car != null)

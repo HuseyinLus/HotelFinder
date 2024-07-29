@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HotelFinder.DataAcces.Migrations
 {
-    [DbContext(typeof(HotelDbContext))]
+    [DbContext(typeof(dbContext))]
     [Migration("20240726123101_initial")]
     partial class initial
     {
