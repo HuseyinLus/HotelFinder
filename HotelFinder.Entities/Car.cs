@@ -29,4 +29,5 @@ namespace HotelFinder.Entities
 
         public Hotel Hotel { get; set; }
     }
+
 }

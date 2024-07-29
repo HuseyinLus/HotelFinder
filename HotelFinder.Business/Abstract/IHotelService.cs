@@ -30,5 +30,9 @@ namespace HotelFinder.Business.Abstract
         Task<Hotel> UpdateHotelCity(int id, string city);
 
         Task<Hotel> UpdateHotelCountry(int id, string country);
+
+        Task<Car> GetHotelsCar(int id);
+
+        Task<Car> GetCarById(int id);
     }
 }

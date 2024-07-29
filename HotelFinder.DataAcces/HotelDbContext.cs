@@ -19,13 +19,14 @@ namespace HotelFinder.DataAcces
 
         public DbSet<Hotel>? Hotels { get; set; }
         public DbSet<Car>? Cars { get; set; }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Car>()
-                .HasOne(c => c.Hotel)
-                .WithMany(h => h.Cars)
-                .HasForeignKey(c => c.HotelId);
-        }
+        //    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //    {
+        //        base.OnModelCreating(modelBuilder);
+        //        modelBuilder.Entity<Car>()
+        //            .HasOne(c => c.Hotel)
+        //            .WithMany(h => h.Cars)
+        //            .HasForeignKey(c => c.HotelId);
+        //    }
+        //}
     }
 }

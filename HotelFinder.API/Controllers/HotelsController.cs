@@ -161,6 +161,18 @@ namespace HotelFinder.API.Controllers
                 return Ok(response);
             }
             return NotFound();
-        }   
+        }
+        [HttpGet]
+        [Route("GetHotelsCars/{id}")]
+        public async Task<IActionResult> GetHotelscars(int id)
+        {
+            var hotel = _hotelService.GetHotelsCar(id);
+
+            if(hotel != null)
+            {
+                return Ok(hotel);
+            }
+            return NotFound();
+        }
     }
 }
