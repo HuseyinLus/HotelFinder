@@ -1,0 +1,37 @@
+﻿using HotelFinder.Business.Abstract;
+using HotelFinder.Business.Concrete;
+using HotelFinder.Entities;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography.X509Certificates;
+
+namespace HotelFinder.API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UsersController : ControllerBase
+    {
+        private IUserService _userService;
+
+        public UsersController(IUserService userService)
+        {
+            _userService = userService;
+        }
+
+        [HttpGet]
+        [Route("GetAllUsers")]
+        public async Task<IActionResult> Get()
+        {
+            var user = _userService.GetAllUsers();
+            return Ok(user);
+        }
+
+        [HttpPost]
+        [Route("AddUser")]
+        public async Task<IActionResult> AddUser([FromBody] User user)
+        {
+            var createdUser = await _userService.AddNewUser(user);
+            return CreatedAtAction("Get", new { id = createdUser.Id }, createdUser);//201 + data 
+        }
+    }
+}

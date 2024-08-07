@@ -17,14 +17,14 @@ namespace HotelFinder.Business.Concrete
         {
             _userRepository = userRepository;
         }
-        public Task<User> AddNewUser(User user)
+        public async Task<User> AddNewUser(User user)
         {
-            throw new NotImplementedException();
+            return await _userRepository.AddNewUser(user);
         }
 
-        public Task<List<User>> GetAllUsers()
+        public async Task<List<User>> GetAllUsers()
         {
-            throw new NotImplementedException();
+            return await _userRepository.GetAllUsers();
         }
     }
 }

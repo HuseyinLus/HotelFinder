@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelFinder.Business.Abstract
 {
-    internal interface IUserService
+    public interface IUserService
     {
         Task<List<User>> GetAllUsers();
 

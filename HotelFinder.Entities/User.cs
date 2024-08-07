@@ -12,11 +12,11 @@ namespace HotelFinder.Entities
     {
         [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
-        private int Id { get; set; }
+        public int Id { get; set; }
 
         [StringLength(50)]
         [Required]
-        private string UserName { get; set; }
+        public string UserName { get; set; }
 
         [StringLength(50)]
         [Required]

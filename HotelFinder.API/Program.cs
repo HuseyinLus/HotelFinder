@@ -14,6 +14,8 @@ builder.Services.AddSingleton<IHotelService, HotelsService>();
 builder.Services.AddSingleton<IHotelRepository, HotelRepository>();
 builder.Services.AddSingleton<ICarService, CarsService>();
 builder.Services.AddSingleton<ICarRepository, CarRepository>();
+builder.Services.AddSingleton<IUserService, UserService>();
+builder.Services.AddSingleton<IUsersRepository, UserRepository>();
 builder.Services.AddSwaggerDocument(config =>
 {
     config.PostProcess = (doc =>

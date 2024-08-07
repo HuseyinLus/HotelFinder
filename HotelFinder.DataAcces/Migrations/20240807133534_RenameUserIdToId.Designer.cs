@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelFinder.DataAcces.Migrations
 {
     [DbContext(typeof(dbContext))]
-    [Migration("20240807090436_AddUsersTable")]
-    partial class AddUsersTable
+    [Migration("20240807133534_RenameUserIdToId")]
+    partial class RenameUserIdToId
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -89,11 +89,11 @@ namespace HotelFinder.DataAcces.Migrations
 
             modelBuilder.Entity("HotelFinder.Entities.User", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("UserEmail")
                         .IsRequired()
@@ -115,7 +115,7 @@ namespace HotelFinder.DataAcces.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("UserId");
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
                 });
