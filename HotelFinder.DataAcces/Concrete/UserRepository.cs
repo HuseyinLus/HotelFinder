@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace HotelFinder.DataAcces.Concrete
 {
-    internal class UserRepository : IUsersRepository
+    public class UserRepository : IUsersRepository
     {
-        public async Task<User> AddNewUer(User user)
+        public async Task<User> AddNewUser(User user)
         {
             using (var userDbContext = new dbContext())
             {
@@ -21,7 +21,7 @@ namespace HotelFinder.DataAcces.Concrete
             }
         }
 
-        public async Task<List<User>> GetaAllUser()
+        public async Task<List<User>> GetAllUsers()
         {
             using (var userDbContext = new dbContext())
             {
