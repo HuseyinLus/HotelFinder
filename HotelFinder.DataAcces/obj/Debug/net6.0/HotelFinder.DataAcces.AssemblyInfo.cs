@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HotelFinder.DataAcces")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03c5438b891315d388129bc3723523f869dee1d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67123538b417f28991223efd4a4989e8d8da5990")]
 [assembly: System.Reflection.AssemblyProductAttribute("HotelFinder.DataAcces")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HotelFinder.DataAcces")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
