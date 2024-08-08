@@ -32,5 +32,15 @@ namespace HotelFinder.API.Controllers
             var createdUser = await _userService.AddNewUser(user);
             return CreatedAtAction("Get", new { id = createdUser.Id }, createdUser);//201 + data 
         }
+
+        [HttpDelete]
+        [Route("DeleteUser")]
+
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            await _userService.DeleteUser(id);
+            return Ok();
+            
+        }
     }
 }

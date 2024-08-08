@@ -12,5 +12,7 @@ namespace HotelFinder.Business.Abstract
         Task<List<User>> GetUsers();
 
         Task<User> AddNewUser(User user);
+
+        Task DeleteUser(int id);
     }
 }

@@ -28,6 +28,17 @@ namespace HotelFinder.DataAcces.Concrete
             }
         }
 
+        public async Task DeleteUser(int id)
+        {
+            using (var userDbContext = new dbContext())
+            {
+                var remove = await userDbContext.Users.FindAsync(id);
+                userDbContext.Users.Remove(remove);
+                await userDbContext.SaveChangesAsync();
+                
+            }
+        }
+
       
     }
 }
