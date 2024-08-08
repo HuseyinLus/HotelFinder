@@ -20,13 +20,14 @@ namespace HotelFinder.DataAcces.Concrete
                 return user;
             }
         }
-
-        public async Task<List<User>> GetAllUsers()
+        public async Task<List<User>> GetUsers()
         {
             using (var userDbContext = new dbContext())
             {
                 return await userDbContext.Users.ToListAsync();
             }
         }
+
+      
     }
 }

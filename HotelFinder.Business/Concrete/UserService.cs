@@ -22,9 +22,9 @@ namespace HotelFinder.Business.Concrete
             return await _userRepository.AddNewUser(user);
         }
 
-        public async Task<List<User>> GetAllUsers()
+      public async Task<List<User>> GetUsers()
         {
-            return await _userRepository.GetAllUsers();
+            return await _userRepository.GetUsers();
         }
     }
 }
