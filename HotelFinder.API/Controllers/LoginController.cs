@@ -23,8 +23,6 @@ namespace HotelFinder.API.Controllers
             if (account != null)
             {
                 return Ok("Welcome");
-                //HttpContext.Session.SetString("username", name);
-                //return RedirectToAction("Welcome", "Account");
             }
             return NotFound();
         }
