@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HotelFinder.Entities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3973a8795434350bacc5c7829e922705c61cb91a")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67123538b417f28991223efd4a4989e8d8da5990")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("HotelFinder.Entities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HotelFinder.Entities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
