@@ -158,3 +158,4 @@ C:\Users\Luka\Source\Repos\HotelFinder\HotelFinder.API\obj\Debug\net6.0\HotelFin
 C:\Users\Luka\Source\Repos\HotelFinder\HotelFinder.API\obj\Debug\net6.0\HotelFinder.API.pdb
 C:\Users\Luka\Source\Repos\HotelFinder\HotelFinder.API\obj\Debug\net6.0\HotelFinder.API.genruntimeconfig.cache
 C:\Users\Luka\Source\Repos\HotelFinder\HotelFinder.API\obj\Debug\net6.0\ref\HotelFinder.API.dll
+C:\Users\Luka\Source\Repos\HotelFinder\HotelFinder.API\obj\Debug\net6.0\HotelFinder.API.MvcApplicationPartsAssemblyInfo.cs
