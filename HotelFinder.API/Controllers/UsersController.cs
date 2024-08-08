@@ -20,12 +20,11 @@ namespace HotelFinder.API.Controllers
 
         [HttpGet]
         [Route("GetAllUsers")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetUsers()
         {
-            var user = _userService.GetAllUsers();
-            return Ok(user);
+            var users = await _userService.GetUsers();
+            return Ok(users);
         }
-
         [HttpPost]
         [Route("AddUser")]
         public async Task<IActionResult> AddUser([FromBody] User user)

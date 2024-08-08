@@ -9,7 +9,7 @@ namespace HotelFinder.DataAcces.Abstract
 {
     public interface IUsersRepository
     {
-        public Task<List<User>> GetAllUsers();
+        public Task<List<User>> GetUsers();
 
         public Task<User> AddNewUser(User user);
     }
