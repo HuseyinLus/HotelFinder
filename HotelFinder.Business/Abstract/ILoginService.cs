@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelFinder.DataAcces.Abstract
+namespace HotelFinder.Business.Abstract
 {
-    public interface IUsersRepository
+    public interface ILoginService
     {
-        Task<List<User>> GetUsers();
-
-        Task<User> AddNewUser(User user);
+       Task<User> Login(string name, string lastname);
     }
 }

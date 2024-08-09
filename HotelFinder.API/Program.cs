@@ -16,7 +16,12 @@ builder.Services.AddSingleton<ICarService, CarsService>();
 builder.Services.AddSingleton<ICarRepository, CarRepository>();
 builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<IUsersRepository, UserRepository>();
-builder.Services.AddSwaggerDocument(config =>
+builder.Services.AddSingleton<ILoginRepository, LoginRepository>();
+builder.Services.AddSingleton<ILoginService, LoginServicecs>();
+builder.Services.AddSession();
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSwagger(config =>
 {
     config.PostProcess = (doc =>
     {
@@ -35,6 +40,7 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 app.UseOpenApi();
 app.UseSwaggerUi();
+app.UseSession();
 
 app.UseEndpoints(endpoints =>
 {

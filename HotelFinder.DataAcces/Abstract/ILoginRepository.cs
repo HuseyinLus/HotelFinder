@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace HotelFinder.DataAcces.Abstract
 {
-    public interface IUsersRepository
+    public interface ILoginRepository
     {
-        Task<List<User>> GetUsers();
-
-        Task<User> AddNewUser(User user);
+        public Task<User> Login(string username, string lastname);
     }
 }
