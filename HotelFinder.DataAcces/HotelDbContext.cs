@@ -1,4 +1,5 @@
-﻿using HotelFinder.Entities;
+﻿using Domain;
+using HotelFinder.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using System;
@@ -21,5 +22,7 @@ namespace HotelFinder.DataAcces
         public DbSet<Car>? Cars { get; set; }
         
         public DbSet<Register>? Registers { get; set; }
+
+        public DbSet<Login>? Logins { get; set; }
     }
 }
