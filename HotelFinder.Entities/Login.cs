@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelFinder.Entities
+namespace Domain
 {
-    public class User
+    public class Login
     {
-        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
         public int Id { get; set; }
 
@@ -20,14 +20,7 @@ namespace HotelFinder.Entities
 
         [StringLength(50)]
         [Required]
-        public string UserLastName { get; set; }
+        public string Password { get; set; }
 
-        [StringLength(40)]
-        [Required]
-        public string UserEmail { get; set; }
-
-        [StringLength(50)]
-        [Required]
-        public string UserLocation { get; set; }
     }
 }

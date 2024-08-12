@@ -9,9 +9,9 @@ namespace HotelFinder.Business.Abstract
 {
     public interface IUserService
     {
-        Task<List<User>> GetUsers();
+        Task<List<Register>> GetUsers();
 
-        Task<User> AddNewUser(User user);
+        Task<Register> AddNewUser(Register user);
 
         Task DeleteUser(int id);
     }

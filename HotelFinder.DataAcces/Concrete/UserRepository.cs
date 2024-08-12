@@ -11,20 +11,20 @@ namespace HotelFinder.DataAcces.Concrete
 {
     public class UserRepository : IUsersRepository
     {
-        public async Task<User> AddNewUser(User user)
+        public async Task<Register> AddNewUser(Register user)
         {
             using (var userDbContext = new dbContext())
             {
-                userDbContext.Users.Add(user);
+                userDbContext.Registers.Add(user);
                 await userDbContext.SaveChangesAsync();
                 return user;
             }
         }
-        public async Task<List<User>> GetUsers()
+        public async Task<List<Register>> GetUsers()
         {
             using (var userDbContext = new dbContext())
             {
-                return await userDbContext.Users.ToListAsync();
+                return await userDbContext.Registers.ToListAsync();
             }
         }
 
@@ -32,8 +32,8 @@ namespace HotelFinder.DataAcces.Concrete
         {
             using (var userDbContext = new dbContext())
             {
-                var remove = await userDbContext.Users.FindAsync(id);
-                userDbContext.Users.Remove(remove);
+                var remove = await userDbContext.Registers.FindAsync(id);
+                userDbContext.Registers.Remove(remove);
                 await userDbContext.SaveChangesAsync();
                 
             }

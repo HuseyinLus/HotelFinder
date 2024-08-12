@@ -9,6 +9,6 @@ namespace HotelFinder.DataAcces.Abstract
 {
     public interface ILoginRepository
     {
-        public Task<User> Login(string userName, string lastName);
+        public Task<Register> Login(string userName, string lastName);
     }
 }

@@ -17,12 +17,12 @@ namespace HotelFinder.Business.Concrete
         {
             _userRepository = userRepository;
         }
-        public async Task<User> AddNewUser(User user)
+        public async Task<Register> AddNewUser(Register user)
         {
             return await _userRepository.AddNewUser(user);
         }
 
-        public async Task<List<User>> GetUsers()
+        public async Task<List<Register>> GetUsers()
         {
             return await _userRepository.GetUsers();
         }
