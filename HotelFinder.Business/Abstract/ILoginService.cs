@@ -9,6 +9,6 @@ namespace HotelFinder.Business.Abstract
 {
     public interface ILoginService
     {
-       Task<User> Login(string name, string lastname);
+       Task<User> Login(string userName, string lastName);
     }
 }

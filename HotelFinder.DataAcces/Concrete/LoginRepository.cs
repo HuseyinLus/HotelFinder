@@ -11,12 +11,12 @@ namespace HotelFinder.DataAcces.Concrete
 {
     public class LoginRepository : ILoginRepository
     {
-        public async Task<User> Login(string username, string lastname)
+        public async Task<User> Login(string userName, string lastName)
         {
             using (var loginDbContext = new dbContext())
             {
-                var response =  loginDbContext.Users.FirstOrDefault(x => x.UserName == username && x.UserLastName == lastname);
-                if(response?.UserName != username)
+                var response =  loginDbContext.Users.FirstOrDefault(x => x.UserName == userName && x.UserLastName == lastName);
+                if(response?.UserName != userName)
                 {
                     return null;
                 }
