@@ -1,4 +1,5 @@
-﻿using HotelFinder.Entities;
+﻿using Domain;
+using HotelFinder.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace HotelFinder.DataAcces.Abstract
 {
     public interface ILoginRepository
     {
-        public Task<Register> Login(string userName, string lastName);
+        public Task<Login> Login(string userName, string password);
     }
 }
