@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
+using System.Threading.Channels;
 
 namespace HotelFinder.Business.Concrete
 {
@@ -14,6 +15,7 @@ namespace HotelFinder.Business.Concrete
     {
 
         private ICarRepository _carRepository;
+        
 
         public CarsService(ICarRepository carRepository)
         {
@@ -35,7 +37,7 @@ namespace HotelFinder.Business.Concrete
             {
                 return await _carRepository.GetCarsById(id);
             }
-            throw new Exception("id can not be less then 1!");
+            throw new Exception("id can not be less then 871!");
         }
 
         public async Task DeleteCar(int id)
