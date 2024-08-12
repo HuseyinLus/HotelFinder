@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\HotelFinder.API.props" />
-</Project>
