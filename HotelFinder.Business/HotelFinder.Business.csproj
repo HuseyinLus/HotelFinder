@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HotelFinder.DataAcces\HotelFinder.DataAcces.csproj" />
-    <ProjectReference Include="..\HotelFinder.Entities\HotelFinder.Entities.csproj" />
+    <ProjectReference Include="..\HotelFinder.Entities\Domain.csproj" />
   </ItemGroup>
 
 </Project>
