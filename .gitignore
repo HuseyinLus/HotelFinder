@@ -1,8 +1,17 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
+# DLL ve derleme dosyalarını hariç tut
+*.dll
+*.exe
+*.pdb
+
+# Bin ve obj klasörlerini hariç tut
+/bin/
+/obj/
 
 /.vs
 /HotelFinder.DataAcces/obj/Debug/net6.0/HotelFinder.DataAcces.csproj.AssemblyReference.cache
 /HotelFinder.Business/obj/Debug/net6.0/HotelFinder.Business.csproj.AssemblyReference.cache
+
 /.gitignore
