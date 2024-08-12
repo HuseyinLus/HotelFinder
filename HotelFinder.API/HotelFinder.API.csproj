@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HotelFinder.Business\HotelFinder.Business.csproj" />
-    <ProjectReference Include="..\HotelFinder.Entities\HotelFinder.Entities.csproj" />
+    <ProjectReference Include="..\HotelFinder.Entities\Domain.csproj" />
   </ItemGroup>
 
 </Project>
