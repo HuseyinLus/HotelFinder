@@ -14,6 +14,14 @@
 /HotelFinder.DataAcces/obj/Debug/net6.0/HotelFinder.DataAcces.csproj.AssemblyReference.cache
 /HotelFinder.Business/obj/Debug/net6.0/HotelFinder.Business.csproj.AssemblyReference.cache
 /.gitignore
+/HotelFinder.API/bin
+/HotelFinder.API/obj
+/HotelFinder.Business/bin
+/HotelFinder.Business/obj
+/HotelFinder.DataAcces/bin
+/HotelFinder.DataAcces/obj
+/HotelFinder.Entities/obj
+/HotelFinder.Entities/bin
 /HotelFinder.API/bin/Debug/net6.0/HotelFinder.API.exe
 /HotelFinder.API/bin/Debug/net6.0/HotelFinder.API.dll
 /HotelFinder.API/bin/Debug/net6.0/HotelFinder.API.pdb

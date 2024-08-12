@@ -22,7 +22,7 @@ namespace HotelFinder.Entities
         [Required]
         public string UserLastName { get; set; }
 
-        [StringLength(50)]
+        [StringLength(40)]
         [Required]
         public string UserEmail { get; set; }
 
