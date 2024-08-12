@@ -27,7 +27,7 @@ namespace HotelFinder.API.Controllers
         }
         [HttpPost]
         [Route("AddUser")]
-        public async Task<IActionResult> AddUser([FromBody] User user)
+        public async Task<IActionResult> AddUser([FromBody] Register user)
         {
             var createdUser = await _userService.AddNewUser(user);
             return CreatedAtAction("Get", new { id = createdUser.Id }, createdUser);//201 + data 
