@@ -58,3 +58,6 @@
 /HotelFinder.DataAcces/bin/Debug/net6.0/HotelFinder.DataAcces.dll
 /HotelFinder.DataAcces/bin/Debug/net6.0/HotelFinder.DataAcces.pdb
 /HotelFinder.DataAcces/obj/Debug/net6.0/ref/HotelFinder.DataAcces.dll
+/HotelFinder.Entities/obj/Debug/net6.0/HotelFinder.Entities.AssemblyInfo.cs
+/HotelFinder.Entities/obj/Debug/net6.0/HotelFinder.Entities.AssemblyInfoInputs.cache
+/HotelFinder.Entities/obj/Debug/net6.0/HotelFinder.Entities.GeneratedMSBuildEditorConfig.editorconfig
