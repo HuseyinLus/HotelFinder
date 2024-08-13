@@ -7,6 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity;
 
 namespace HotelFinder.DataAcces
 {
@@ -25,4 +28,13 @@ namespace HotelFinder.DataAcces
 
         public DbSet<Login>? Logins { get; set; }
     }
+
+    public class AppDbContext : IdentityDbContext<IdentityUser>
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
+        {
+
+        }
+    } 
 }
