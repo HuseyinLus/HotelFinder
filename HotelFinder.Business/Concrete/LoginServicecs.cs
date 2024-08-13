@@ -19,9 +19,15 @@ namespace HotelFinder.Business.Concrete
             _loginRepository = loginRepository;
         }
 
-        public async Task<Login> Login(string userName, string lastName)
+        public async Task<Register> Login(string userName, string password)
         {
-            var res =  await _loginRepository.Login(userName, lastName);
+            var res =  await _loginRepository.Login(userName, password);
+            return res;
+        }
+
+        public async Task<Register> GetUserInfo(string userName)
+        {
+            var res = await _loginRepository.GetUserInfo(userName);
             return res;
         }
     }

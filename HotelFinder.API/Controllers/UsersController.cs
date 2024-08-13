@@ -30,7 +30,8 @@ namespace HotelFinder.API.Controllers
         public async Task<IActionResult> AddUser([FromBody] Register user)
         {
             var createdUser = await _userService.AddNewUser(user);
-            return CreatedAtAction("Get", new { id = createdUser.Id }, createdUser);//201 + data 
+            CreatedAtAction("Get", new { id = createdUser.Id }, createdUser);//201 + data 
+            return Ok(user);
         }
 
         [HttpDelete]

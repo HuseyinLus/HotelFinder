@@ -2,6 +2,7 @@
 using HotelFinder.DataAcces.Abstract;
 using HotelFinder.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,12 @@ namespace HotelFinder.DataAcces.Concrete
 {
     public class LoginRepository : ILoginRepository
     {
-        public async Task<Login> Login(string userName, string password)
+        public async Task<Register> Login(string userName, string password)
         {
             using (var loginDbContext = new dbContext())
             {
-                var response = loginDbContext.Logins.FirstOrDefault(x => x.UserName == userName && x.Password == password);
-                if (response?.UserName != userName)
+                var response = loginDbContext.Registers.FirstOrDefault(x => x.Username == userName && x.Password == password);
+                if (response?.Username != userName)
                 {
                     return null;
                 }
@@ -30,5 +31,18 @@ namespace HotelFinder.DataAcces.Concrete
 
 
         }
+        public async Task<Register> GetUserInfo(string userName)
+        {
+            using (var loginDbContext = new dbContext())
+            {
+                var response = loginDbContext.Registers.FirstOrDefault(x => x.Name == userName);
+                if(response?.Name != userName)
+                {
+                    return null;
+                }
+                return response;
+            }
+        }
+        
     }
 }

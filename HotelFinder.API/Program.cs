@@ -16,6 +16,8 @@ builder.Services.AddSingleton<ICarService, CarsService>();
 builder.Services.AddSingleton<ICarRepository, CarRepository>();
 builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<IUsersRepository, UserRepository>();
+builder.Services.AddSingleton<ILoginService, LoginServicecs>();
+builder.Services.AddSingleton<ILoginRepository, LoginRepository>();
 builder.Services.AddSwaggerDocument(config =>
 {
     config.PostProcess = (doc =>
@@ -23,7 +25,7 @@ builder.Services.AddSwaggerDocument(config =>
         doc.Info.Title = "Hotels Api";
         doc.Info.Version = "1.0.13";
     });
-}); 
+});
 
 var app = builder.Build();
 

@@ -10,6 +10,10 @@ namespace HotelFinder.Business.Abstract
 {
     public interface ILoginService
     {
-       Task<Login> Login(string userName, string lastName);
+        Task<Register> Login(string userName, string password);
+
+        Task<Register> GetUserInfo(string userName);
+
+
     }
 }

@@ -16,13 +16,19 @@ namespace HotelFinder.API.Controllers
         }
 
         [HttpGet]
-        [Route("Login")]
-        public async Task<IActionResult> Login(string userName, string lastName)
+        [Route("SignIn")]
+        public async Task<IActionResult> Login(string userName, string password)
         {
-            var account = await _loginService.Login(userName, lastName);
+            var account = await _loginService.Login(userName, password);
             if (account != null)
             {
-                return Ok("successfully logged in");
+                var login = await _loginService.GetUserInfo(userName);
+                return Ok(new
+                {
+                    Message = $"Welcome {userName}",
+                    UserInfo = login
+                });
+                
             }
             return NotFound("Failed to login");
         }
