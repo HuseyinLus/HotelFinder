@@ -35,8 +35,8 @@ namespace HotelFinder.DataAcces.Concrete
         {
             using (var loginDbContext = new dbContext())
             {
-                var response = loginDbContext.Registers.FirstOrDefault(x => x.Name == userName);
-                if(response?.Name != userName)
+                var response = loginDbContext.Registers.FirstOrDefault(x => x.Username == userName);
+                if(response?.Username != userName)
                 {
                     return null;
                 }
