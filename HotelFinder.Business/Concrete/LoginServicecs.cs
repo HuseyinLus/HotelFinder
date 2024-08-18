@@ -21,7 +21,7 @@ namespace HotelFinder.Business.Concrete
 
         public async Task<Register> Login(string userName, string password)
         {
-            var res =  await _loginRepository.Login(userName, password);
+            var res = await _loginRepository.Login(userName,password);
             return res;
         }
 

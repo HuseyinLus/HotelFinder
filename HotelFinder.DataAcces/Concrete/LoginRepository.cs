@@ -13,7 +13,7 @@ namespace HotelFinder.DataAcces.Concrete
 {
     public class LoginRepository : ILoginRepository
     {
-        public async Task<Register> Login(string userName, string password)
+        public async Task<Register> Login(string userName,string password)
         {
             using (var loginDbContext = new dbContext())
             {
