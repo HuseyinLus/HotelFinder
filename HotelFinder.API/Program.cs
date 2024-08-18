@@ -2,11 +2,16 @@ using HotelFinder.Business.Abstract;
 using HotelFinder.Business.Concrete;
 using HotelFinder.DataAcces.Abstract;
 using HotelFinder.DataAcces.Concrete;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using System.Reflection.Metadata.Ecma335;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Register services
 builder.Services.AddControllers();
@@ -18,6 +23,20 @@ builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<IUsersRepository, UserRepository>();
 builder.Services.AddSingleton<ILoginService, LoginServicecs>();
 builder.Services.AddSingleton<ILoginRepository, LoginRepository>();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
 builder.Services.AddSwaggerDocument(config =>
 {
     config.PostProcess = (doc =>
@@ -35,6 +54,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseOpenApi();
 app.UseSwaggerUi();
 

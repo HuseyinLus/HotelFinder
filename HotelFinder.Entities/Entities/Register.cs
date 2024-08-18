@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HotelFinder.Entities
 {
-    public class Registers
+    public class Register
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
