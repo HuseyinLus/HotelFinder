@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using NSwag;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
@@ -44,6 +45,17 @@ builder.Services.AddSwaggerDocument(config =>
         doc.Info.Title = "Hotels Api";
         doc.Info.Version = "1.0.13";
     });
+    config.AddSecurity("Bearer", Enumerable.Empty<string>(), new OpenApiSecurityScheme
+    {
+        Type = OpenApiSecuritySchemeType.ApiKey,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = NSwag.OpenApiSecurityApiKeyLocation.Header,
+        Name = "Authorization",
+        Description = "Input your JWT token like this: Bearer {your JWT token here}"
+    });
+
+    config.OperationProcessors.Add(new NSwag.Generation.Processors.Security.OperationSecurityScopeProcessor("Bearer"));
 });
 
 var app = builder.Build();
