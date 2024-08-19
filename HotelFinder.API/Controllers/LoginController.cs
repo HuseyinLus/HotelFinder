@@ -26,7 +26,7 @@ namespace HotelFinder.API.Controllers
         [AllowAnonymous]
         [HttpPost]
         [Route("SignIn")]
-        public async Task<IActionResult> Login(string userName, string password)
+        public async Task<IActionResult> Login([FromForm]string userName,[FromForm] string password)
         {
             var user = await Authentication(userName,password);
             if (user != null)
