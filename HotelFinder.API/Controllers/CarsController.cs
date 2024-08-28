@@ -1,6 +1,7 @@
 ﻿using HotelFinder.Business.Abstract;
 using HotelFinder.Business.Concrete;
 using HotelFinder.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
@@ -20,6 +21,7 @@ namespace HotelFinder.API.Controllers
 
         [HttpGet]
         [Route("GetAllCars")]
+        [Authorize]
         public async Task<IActionResult> Get()
         {
             var cars = await _carService.GetAllCars();
