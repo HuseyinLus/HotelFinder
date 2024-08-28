@@ -1,6 +1,7 @@
 ﻿using HotelFinder.Business.Abstract;
 using HotelFinder.Business.Concrete;
 using HotelFinder.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography.X509Certificates;
@@ -20,6 +21,7 @@ namespace HotelFinder.API.Controllers
 
         [HttpGet]
         [Route("GetAllUsers")]
+        [Authorize]
         public async Task<IActionResult> GetUsers()
         {
             var users = await _userService.GetUsers();
