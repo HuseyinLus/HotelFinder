@@ -16,7 +16,9 @@ namespace HotelFinder.API.Controllers
     public class LoginController : ControllerBase
     {
         private ILoginService _loginService;
-        private IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
+
+
 
         public LoginController(ILoginService loginService,IConfiguration configuration)
         {
@@ -31,61 +33,33 @@ namespace HotelFinder.API.Controllers
             var user = await Authentication(userName,password);
             if (user != null)
             {
-                var token = Generate(user);
-                return Ok(token);
-            }
-            return NotFound("User not found");
-        }
-
-        public string Generate(Register user)
-        {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-            var claims = new[]
-            {
-                new Claim(ClaimTypes.Name,user.Username),
-                new Claim(ClaimTypes.GivenName,user.Name),
-                new Claim(ClaimTypes.Surname,user.LastName),
-                new Claim(ClaimTypes.Email,user.Email),
+                var token = GenerateAccessToken(userName);
+                // return access token for user's use
+                return Ok(new { AccessToken = new JwtSecurityTokenHandler().WriteToken(token) });
                 
-            };
-            var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
-                _configuration["Jwt:Audiece"],
-                claims,
-                expires: DateTime.Now.AddMinutes(15),
-                signingCredentials: credentials);
-            return new JwtSecurityTokenHandler().WriteToken(token);
-
-
-        }
-
-        public async Task<Register> Authentication(string userName,string password)
-        {
-            var account = await _loginService.Login(userName,password);
-            if (account != null)
-            {
-                return account;
             }
             return null;
         }
+        private JwtSecurityToken GenerateAccessToken(string userName)
+        {
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, userName),
+        // Additional claims can be added here
+    };
 
-        //[HttpGet]
-        //[Route("SignIn")]
-        //public async Task<IActionResult> Login(string userName, string password)
-        //{
-        //    var account = await _loginService.Login(userName, password);
-        //    if (account != null)
-        //    {
-        //        var login = await _loginService.GetUserInfo(userName);
-        //        return Ok(new
-        //        {
-        //            Message = $"Welcome {userName}",
-        //            UserInfo = login
-        //        });
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(10),
+                signingCredentials: new SigningCredentials(
+                    new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"])),
+                    SecurityAlgorithms.HmacSha256)
+            );
 
-        //    }
-        //    return NotFound("Failed to login");
-        //}
+            return token;
+        }
+
     }
 }

@@ -32,6 +32,7 @@ namespace HotelFinder.API.Controllers
 
         [HttpGet]
         [Route("GetAllUsers")]
+        [Authorize]
         public async Task<IActionResult> GetUsers()
         {
             var users = await _userService.GetUsers();

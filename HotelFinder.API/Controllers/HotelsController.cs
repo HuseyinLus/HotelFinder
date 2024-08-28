@@ -1,5 +1,6 @@
 ﻿using HotelFinder.Business.Abstract;
 using HotelFinder.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HotelFinder.API.Controllers
@@ -18,8 +19,10 @@ namespace HotelFinder.API.Controllers
         /// Get All Hotels
         /// </summary>
         ///// <returns></returns>
+        ///
         [HttpGet]
         [Route("GetAllHotels")]
+        [Authorize]
         public async Task<IActionResult> Get()
         {
             var hotels = await _hotelService.GetHotels();
@@ -48,6 +51,8 @@ namespace HotelFinder.API.Controllers
         ///// <param name="hotel"></param>
         ///// <returns></returns>
         [HttpPost("CreateHotel")]
+        [Authorize]
+
         public async Task<IActionResult> Post([FromBody] Hotel hotel)
         {
             var createdHotel = await _hotelService.CreateHotel(hotel);
