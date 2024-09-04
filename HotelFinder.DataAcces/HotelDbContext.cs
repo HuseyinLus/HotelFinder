@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Identity;
+using Domain.Entities;
 
 namespace HotelFinder.DataAcces
 {
@@ -25,6 +26,23 @@ namespace HotelFinder.DataAcces
         public DbSet<Car>? Cars { get; set; }
         public DbSet<Register>? Registers { get; set; }
         public DbSet<Login>? Logins { get; set; }
-    }
+        public DbSet<RefreshTokenEntities>? RefreshTokens { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Login>()
+                .HasKey(l => l.Id);
+
+            modelBuilder.Entity<RefreshTokenEntities>()
+                .HasKey(r => r.Id);
+
+            modelBuilder.Entity<RefreshTokenEntities>()
+                .HasOne(r => r.Logins)
+                .WithMany(l => l.RefreshTokens)
+                .HasForeignKey(r => r.UserId)
+                .OnDelete(DeleteBehavior.Cascade); // Kullanıcı silindiğinde ilişkili tokenlar da silinir
+
+            base.OnModelCreating(modelBuilder);
+        }
+    }
 }

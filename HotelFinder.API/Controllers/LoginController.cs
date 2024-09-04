@@ -25,20 +25,19 @@ namespace HotelFinder.API.Controllers
             _loginService = loginService;
             _configuration = configuration;
         }
-        [AllowAnonymous]
-        [HttpPost]
+        [HttpGet]
         [Route("SignIn")]
-        public async Task<IActionResult> Login([FromForm]string userName,[FromForm] string password)
+        public async Task<IActionResult> Login(string userName, string password)
         {
-            var user = await Authentication(userName,password);
-            if (user != null)
+            var account = await _loginService.Login(userName, password);
+            if (account != null)
             {
                 var token = GenerateAccessToken(userName);
                 // return access token for user's use
                 return Ok(new { AccessToken = new JwtSecurityTokenHandler().WriteToken(token) });
-                
+
             }
-            return null;
+            return NotFound("Failed to login");
         }
         private JwtSecurityToken GenerateAccessToken(string userName)
         {
@@ -60,6 +59,5 @@ namespace HotelFinder.API.Controllers
 
             return token;
         }
-
     }
 }

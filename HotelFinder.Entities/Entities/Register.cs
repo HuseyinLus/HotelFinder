@@ -17,26 +17,26 @@ namespace HotelFinder.Entities
 
         [StringLength(50)]
         [Required]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [StringLength(50)]
         [Required]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [StringLength(50)]
         [Required]
-        public string Username { get; set; }
+        public string? Username { get; set; }
 
         [StringLength(50)]
         [Required]
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         [StringLength(40)]
         [Required]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [StringLength(50)]
         [Required]
-        public string Location { get; set; }
+        public string?  Location { get; set; }
     }
 }

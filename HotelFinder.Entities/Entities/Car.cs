@@ -16,18 +16,18 @@ namespace Domain.Entities
 
         [StringLength(50)]
         [Required]
-        public string CarModel { get; set; }
+        public string? CarModel { get; set; }
 
         [StringLength(50)]
         [Required]
-        public string LicencePlate { get; set; }
+        public string? LicencePlate { get; set; }
 
         [StringLength(50)]
         [Required]
-        public string ContactNumber { get; set; }
+        public string? ContactNumber { get; set; }
         public int HotelId { get; set; }
 
-        public Hotel Hotel { get; set; }
+        public Hotel? Hotel { get; set; }
     }
 
 }

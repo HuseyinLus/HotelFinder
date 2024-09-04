@@ -1,4 +1,5 @@
-﻿using HotelFinder.Business.Abstract;
+﻿using Domain.Entities;
+using HotelFinder.Business.Abstract;
 using HotelFinder.Business.Concrete;
 using HotelFinder.Entities;
 using Microsoft.AspNetCore.Authorization;

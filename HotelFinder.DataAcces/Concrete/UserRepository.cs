@@ -38,7 +38,5 @@ namespace HotelFinder.DataAcces.Concrete
                 
             }
         }
-
-      
     }
 }

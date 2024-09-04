@@ -16,11 +16,13 @@ namespace Domain.Entities
 
         [StringLength(50)]
         [Required]
-        public string UserName { get; set; }
+        public string? UserName { get; set; }
 
         [StringLength(50)]
         [Required]
-        public string Password { get; set; }
+        public string? Password { get; set; }
+
+        public ICollection<RefreshTokenEntities>? RefreshTokens { get; set; } // Kullanicinin sahip oldugu tokenler
 
     }
 }
