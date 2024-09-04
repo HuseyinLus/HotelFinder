@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
+using Domain.Entities;
 
 namespace HotelFinder.Business.Concrete
 {

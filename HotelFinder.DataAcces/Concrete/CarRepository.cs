@@ -1,4 +1,5 @@
-﻿using HotelFinder.DataAcces.Abstract;
+﻿using Domain.Entities;
+using HotelFinder.DataAcces.Abstract;
 using HotelFinder.DataAcces.Migrations;
 using HotelFinder.Entities;
 using Microsoft.EntityFrameworkCore;

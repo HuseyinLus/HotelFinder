@@ -23,6 +23,6 @@ namespace Domain.Entities
 
         public int CarID { get; set; }
 
-        public ICollection<Car> Cars { get; set; }
+        public ICollection<Car>? Cars { get; set; }
     }
 }

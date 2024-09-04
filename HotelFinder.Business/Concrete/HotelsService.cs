@@ -1,4 +1,5 @@
-﻿using HotelFinder.Business.Abstract;
+﻿using Domain.Entities;
+using HotelFinder.Business.Abstract;
 using HotelFinder.DataAcces.Abstract;
 using HotelFinder.DataAcces.Concrete;
 using HotelFinder.Entities;
